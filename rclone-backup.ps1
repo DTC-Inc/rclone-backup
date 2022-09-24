@@ -12,3 +12,6 @@ cmd /c "mklink $env:SYSTEMDRIVE\shadowcopy $d /d"
 
 # Remove symbolic link
 Remove-Item "$env:SYSTEMDRIVE\shadowcopy" -Force
+
+# Remove ShadowCopy
+vssadmin delete shadows /shadow=$shadowId
